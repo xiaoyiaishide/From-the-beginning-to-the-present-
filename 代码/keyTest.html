@@ -1,0 +1,49 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+  <title> New Document </title>
+  <style>
+  body {
+	display: box;
+		box-orient: horizontal;
+	}
+	#box1 {
+		box-flex: 2;
+	}
+	#box2 {
+		box-flex: 1;
+	}
+  </style>
+  <script src="jquery.js"></script>
+  <script>
+	$(function(){
+		$("#phone").keyup(function(){
+			var s=$("#phone").val();
+			if(s=="15842600996"){
+				$("#radio").css("display","block");
+			}
+			else{
+				$("#radio").css("display","none");
+			}
+		});
+	});
+  </script>
+ </head>
+
+ <body>
+ <div>
+ <h1>门店配送服务申请</h1>
+  会员手机号：<input type="text" id="phone"/>
+  </div>
+  <div>
+  交易号：<input type="text" id="number"><span style="width:200px;">支持交易流水号，也支持扫描购物小票上的条形码进行验证。判断标准预估可独立申请相同：离118元可免费配送。（不同的是：不用判断交易税单号是否为当天）</span>
+  </div>
+  寄送至：
+  <div id="radio" style="display:none">
+  <input type="radio">辽宁省大连市沙河口区</br>
+  <input type="radio">辽宁省大连市中山区</br>
+  <input type="radio">辽宁省大连市西岗区</br>
+  <input type="radio">辽宁省大连市甘井子区</br>
+  </div>
+ </body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+ </head>
+ <body>
+ <div id = 'timer'></div>
+ </body>
+  <script type="text/javascript">
+   window.onload = function() {
+     var init = 5;
+     var set = setInterval(function() {
+       if (init === 0) {
+        document.querySelector('#timer').innerHTML = 0;
+        clearInterval(set);
+       }else{
+        document.querySelector('#timer').innerHTML = init;
+        init--;
+       }
+     },1000);
+   }
+ </script>
+</html>

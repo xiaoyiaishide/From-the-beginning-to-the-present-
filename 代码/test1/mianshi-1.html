@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>CSS重叠</title>
+  <style type="text/css">
+    body{
+      position: relative;
+    }
+    #id1{
+      position: absolute;
+      left:200px;
+      top:200px;
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      z-index: 1;
+    }
+    #id2{
+      position: absolute;
+      left:250px;
+      top:250px;
+      width: 100px;
+      height: 100px;
+      background-color: yellow;
+    }
+    #id3{
+      position: absolute;
+      left:300px;
+      top:300px;
+      width: 100px;
+      height: 100px;
+      background-color: blue;
+    }
+    .circle{
+      background: #fb3;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+    }
+  </style>
+  <script type="text/javascript">
+  window.onload = function() {
+          setInterval(function() {
+          var title = document.title;
+          if (isShine == true) {
+              if (/新/.test(title) == false) {
+                  document.title = '【你有新消息】';    
+              } else {
+                  document.title = '【　　　　　】';
+              }
+          } else {
+              document.title = titleInit;
+          }
+      }, 500);
+  }
+  </script>
+</head>
+<body>
+<div id="id1"></div>
+<div id="id2"></div>
+<div id="id3"></div>
+<div class="circle"></div>
+</body>
+</html>

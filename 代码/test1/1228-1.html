@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <style type="text/css">
+
+    #id1{
+      position: relative;
+      height: 100px;
+      width: 100px;
+      background-color: red;
+      /*float:right;*/
+    }
+
+    #id2{
+      position: relative;
+      height: 100px;
+      width: 100px;
+      background-color: orange;
+      float: left;
+      z-index: 1;
+    }
+
+    #id3{
+      position: relative;
+      height: 100px;
+      width: 100px;
+      background-color: yellow;
+      z-index: 1;
+    }
+
+  </style>
+  <script type="text/javascript">
+    window.onload = function() {
+      document.getElementById("id1").addEventListener("click",function() {
+        alert("div");
+      });
+      document.getElementsByTagName("span")[0].addEventListener("click",function() {
+        alert("span");
+      });
+
+      var summary = document.querySelector('#summary');
+      var c1 = document.querySelector('#c1');
+      var s1 = document.querySelector('#s1');      
+      var c2 = document.querySelector('#c2');
+      var s2 = document.querySelector('#s2');      
+      var c3 = document.querySelector('#c3');
+      var s3 = document.querySelector('#s3');
+      summary.addEventListener('click',function(e) {
+        switch(e.target.id){
+          case "c1":
+            (c1.checked)?(s1.disabled = false):(s1.disabled = true);
+          case "c2":
+            (c2.checked)?(s2.disabled = false):(s2.disabled = true);
+          case "c3":
+            (c3.checked)?(s3.disabled = false):(s3.disabled = true);
+        }
+      })
+      // summary.addEventListener('click',function(e) {
+      //   if(c1.checked){
+      //     s1.disabled = false;
+      //   }else{
+      //     s1.disabled = true;
+      //   }
+      // })
+    };
+  </script>
+</head>
+<body>
+<div id='id1'><span>haha</span></div>
+<div id='id2'></div>
+<div id='id3'></div>
+<svg width="200" height="200">
+  <circle fill="#3E5693" cx="50" cy="120" r="20" />
+  <text x="100" y="100">Hello SVG!</text>
+  <path d="M100,10L150,70L50,70Z" fill="#BEDBC3" stroke="#539E91" stroke-width="3">
+</svg>
+<section id ='summary'>
+  <section>
+    <input type="checkbox" id="c1">
+    <select id="s1" disabled="true">
+      <option>结算到门店</option>
+      <option>结算到天狗</option>
+      <option>结算到HK</option>
+    </select>
+  </section>
+  <section>
+    <input type="checkbox" id="c2">
+    <select id="s2" disabled="true">
+      <option>结算到门店</option>
+      <option>结算到天狗</option>
+      <option>结算到HK</option>
+    </select>
+  </section>
+  <section>
+    <input type="checkbox" id="c3">
+    <select id="s3" disabled="true">
+      <option>结算到门店</option>
+      <option>结算到天狗</option>
+      <option>结算到HK</option>
+    </select>
+  </section>
+</section>
+</body>
+</html>

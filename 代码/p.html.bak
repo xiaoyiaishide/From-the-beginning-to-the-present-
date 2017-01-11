@@ -1,0 +1,23 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+  <title> script example </title>
+  <meta name="Generator" content="EditPlus">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+ </head>
+ <body>
+		<script defer>
+			alert("defer");
+		</script>	
+		<script>
+			alert("script");
+		</script>
+		<script>
+			window.load()=function(){
+				alert("load");
+			};
+		</script>
+ </body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style type="text/css">
+  span{
+    display: inline-block;
+    background-color: #e7e7e7;
+    width:100px;
+    height:30px;
+    line-height: 30px;
+    text-align: center;
+  }
+</style>
+  <title></title>
+  <script type="text/javascript">
+    window.onload = function() {
+      var spanArr = document.querySelectorAll("span");
+      for(var i = 0;i<spanArr.length;i++){
+        spanArr[i].style.color = 'black';
+      }
+
+      document.querySelector('#area').addEventListener('click',function (e) {
+        if(e.target.id==='s1'){
+          if(document.querySelector('#s1').style.color==='black'){
+            document.querySelector('#s1').style.color = 'red';
+            document.querySelector('#s2').style.color = 'black';
+            document.querySelector('#s3').style.color = 'black';
+            document.querySelector('#s4').style.color = 'black';
+            document.querySelector('#s5').style.color = 'black';
+            document.querySelector('#s6').style.color = 'black';
+          }else{
+            document.querySelector('#s1').style.color = 'black';
+            document.querySelector('#s2').style.color = 'black';
+            document.querySelector('#s3').style.color = 'black';
+            document.querySelector('#s4').style.color = 'black';
+            document.querySelector('#s5').style.color = 'black';
+            document.querySelector('#s6').style.color = 'black';
+          }
+        }else{
+          document.querySelector('#s1').style.color = 'black';
+          this.style.color = 'red';
+        }
+      })
+    }
+  </script>
+</head>
+<body>
+  <div id = 'area'>
+    <span id="s1">全部订单</span>
+    <span id="s2">虚拟货架订单</span>
+    <span id="s3">试衣秀订单</span>
+    <span id="s4">试衣间订单</span>
+    <span id="s5">电子小票订单</span>
+    <span id="s6">其他订单</span>
+  </div>
+</body>
+</html>

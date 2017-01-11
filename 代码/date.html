@@ -1,0 +1,30 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+  <title> New Document </title>
+  <meta name="Generator" content="EditPlus">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <script>
+  function da(){
+		business_setDate( -6, "yyyy-MM-dd 00:00:00");
+  }
+  function business_setDate(dom, index, format, fromDate) {
+    if(!dom) {return ;}
+    if(!index) {index = 0}
+    if(fromDate) {
+        fromDate = new Date((fromDate || "").replace(/-/g, "/"));
+    } else {
+        fromDate = new Date();
+    }
+    var time = (fromDate).setDate((fromDate.getDate() + index));
+    time = new Date(time);
+    $(dom).val(time.Format(format || "yyyy-MM-dd"));
+}
+  </script>
+ </head>
+ <body>
+ <input type="button" value="µãÎÒ" onclick="da();"/>
+ </body>
+</html>

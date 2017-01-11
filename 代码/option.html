@@ -1,0 +1,30 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+  <title> New Document </title>
+  <meta name="Generator" content="EditPlus">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <script src="jquery.js"></script>
+  <script>
+	$(function(){
+		$("[name=s]").change(function(){
+			onchange();
+		});
+		function onchange(){
+			var id=$("[name=s]").val();
+			var s=$("[name=s] option[value="+id+"]").text();
+			alert(s);
+		}
+	});
+  </script>
+ </head>
+
+ <body>
+  <select name="s">
+  <option value="1">大连</option>
+  <option value="2">北京</option>
+  </select>
+ </body>
+</html>

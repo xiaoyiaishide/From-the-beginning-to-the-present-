@@ -1,0 +1,46 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+  <title> New Document </title>
+  <meta name="Generator" content="EditPlus">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <script src="jquery.js"></script>
+  <script>
+  $(function(){
+	  var jsonString=[];
+	  $("tr:gt(2)").each(function(){
+			  var obj={};
+			  var s=$("td:eq(0)").text();
+			  alert(s);
+		  });
+  });
+  </script>
+ </head>
+ <body>
+  <table>
+  <tr>
+	<td>’≈</td>
+	<td>Õı</td>
+	<td>¿Ó</td>
+	<td>’‘</td>
+	<td>¡ı</td>
+  </tr>
+  <tr>
+	<td>6</td>
+	<td>7</td>
+	<td>8</td>
+	<td>9</td>
+	<td>10</td>
+  </tr>
+  <tr>
+	<td>11</td>
+	<td>12</td>
+	<td>13</td>
+	<td>14</td>
+	<td>15</td>
+  </tr>
+  </table>
+ </body>
+</html>

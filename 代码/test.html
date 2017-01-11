@@ -1,0 +1,63 @@
+<div class="page-wrapper" id="order-list-page">
+	<div id="page-toolbar">
+		<form class="search-form" id="search-form">
+			<table>
+				<tr>
+					<td>下单日期</td>
+					<td><input type="text" name="createTimeGE" class="date" format="yyyy-MM-dd hh-mm-ss"/></td>
+					<td>到</td>
+					<td><input type="text" name="createTimeLT" class="date" format="yyyy-mm-dd hh-mm-ss"/></td>
+				</tr>
+				<tr>
+					<td>店铺类型：</td>
+					<td><input type="text" name="source" type="combo" combodata="SOURCE_TYPE"/></td>
+					<td>活动名称：</td>
+					<td><input type="text" name="activityName"/></td>
+					<td><input type="text" name="advertiseName"/></td>
+					<td><input type="button" id="search" value="查询"/><input type="button" id="reset" value="清空"></td>
+				</tr>
+			</table>
+		</form>
+	</div>
+	<div id="page-content">
+	<table id="order-list-datagrid"></table>
+	</div>
+</div>
+<script type="text/javascript">
+	$(function(){
+		getWidgets();
+		renderWidgets();
+	})
+	function getWidgets(){
+		window.orderListDatagrid=$("#order-list-page #order-list-content #order-list-datagrid");
+	}
+	function renderWidgets(){
+		renderOrderListDatagrid();
+		renderPageToolbar(window.orderListDatagrid);
+		bussiness_setData($("input[name=createTimeLT]"),0,'yyyy-mm-dd 23:59:59');
+		bussiness_setData($("input[name=createTimeGE]"),-6,'yyyy-mm-dd 00:00:00<!--  -->');
+	}
+	function renderOrderListDatagrid(){
+		var dg=window.orderListDatagrid;
+		dg.datagrid({
+			queryParams:{},
+			pageSize:10,
+			nowrap:false,
+			pagination:true,
+			url:'',
+			toolbar:[{text:'导出',handler:handleExport}],
+			columns:[[
+				{field:'check',width:30,checkbox:true},
+				{field:'action',title:'操作',width:70,
+					formatter:function(v,r,i){
+						if()
+					}
+				},
+				{field:'id',title:'订单编号',width:90,sortable:true,filter:true}，
+				{field:'memberPhone',title:'客户联系电话',width:90,sortable:true,filter:true}，
+				{field:'totalAmount',title:'总金额',width:30,sortable:true,}
+				{field:'store.name',title='预定店铺',width:90,sortable:true,filter:true}
+			]]
+		});
+	}
+</script>

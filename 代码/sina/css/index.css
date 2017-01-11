@@ -1,0 +1,110 @@
+body{
+  margin: 0px;
+  padding: 0px;
+}
+
+.header{
+  position: fixed;
+  width: 100%;
+  min-width: 1000px;
+  z-index: 9999;
+}
+/*toolbar样式 start*/
+.toolbar{
+  position: relative;
+  height: 41px;
+  border-top: 3px solid #ff8500;
+  border-bottom: 1px solid #edeef0;
+  background-color: #fcfcfc;
+  overflow: hidden;
+}
+
+/*toobar left样式 start*/
+.left-content{
+  position: relative;
+  float: left;
+  margin-left: 200px;
+  height: 100%;
+}
+
+.left-content-child{
+  position: relative;
+  float: left;
+  height: 100%;
+  padding: 10px;
+  padding-left: 15px;
+}
+
+.left-content-child a{
+  text-decoration: none;
+  font-family:"Microsoft YaHei","微软雅黑","SimSun","宋体";
+  font-size: 13px;
+}
+/*toobar left样式 end*/
+
+/*toolbar right样式 start*/
+.right-content{
+  position: relative;
+  float: right;
+  margin-right: 200px;
+  height: 100%;
+}
+.right-content-child{
+  position: relative;
+  float: left;
+  height: 100%;
+  padding: 10px;
+  padding-left: 15px;
+}
+.right-content-child a{
+  text-decoration: none;
+  font-family:"Microsoft YaHei","微软雅黑","SimSun","宋体";
+  font-size: 13px;
+  margin-right: 15px;
+}
+.arrow{
+  display:inline-block;
+  width:8px;
+  height:5px;
+  margin:0 0 0 5px;
+  vertical-align:middle;
+  background:url(http://i0.sinaimg.cn/home/main/index2013/0403/icon.png) 0 -977px no-repeat
+}
+/*toolbar right样式 end*/
+
+/*鼠标移上去事件 start*/
+#l1:hover{
+  background-color: #e3e6ed;
+  color:#e67902;
+}
+#l2:hover{
+  background-color: #e3e6ed;
+  color:#e67902;
+}
+#l3:hover{
+  background-color: #e3e6ed;
+  color:#e67902;
+}
+#r1:hover{
+  background-color: #e3e6ed;
+  color:#e67902;
+}
+#r2:hover{
+  background-color: #e3e6ed;
+  color:'red';
+}
+#r3:hover{
+  background-color: #e3e6ed;
+  color:'red';
+}
+#r4:hover{
+  background-color: #e3e6ed;
+  color:'red';
+}
+#r5:hover{
+  background-color: #e3e6ed;
+  color:'red';
+}
+/*鼠标移上去事件 end*/
+
+/*toolbar样式 end*/

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html ng-app="myModule">
+  <head>
+    <meta charset="utf-8">
+    <title>review</title>
+  </head>
+  <body ng-controller="ly as main">
+    <div class="" ng-repeat="hawk in main.hawks">
+      <span>{{hawk.head}}</span>
+      <span>{{hawk.leg}}</span>
+      <span>{{hawk.eye}}</span>
+      <button type="button" name="button" ng-click=main.remove($index)>删除</button>
+    </div>
+  </body>
+  <script src="angular.min.js" charset="utf-8"></script>
+  <script src="demo.js" charset="utf-8"></script>
+</html>
