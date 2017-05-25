@@ -1,0 +1,13 @@
+<!-- <h1>
+  {{title}}
+</h1> -->
+	<!-- root text:<input type="text" (keyup) = 'onKey($event)'>{{value}} -->
+	<!-- root text:<input type="text" #inputText (keyup) = '0'>{{inputText.value}} -->
+<div>
+    root text: <input type="text" #textInput value="{{text}}">
+    <button (click)="onChange(textInput.value)">change</button>
+    <child-component [text]="text" (changed)="onChange($event)"></child-component>
+    <child-component [text]="text" (changed)="onChange($event)"></child-component>
+    <child-component [text]="text" (changed)="onChange($event)"></child-component>
+</div>
+	

@@ -6,17 +6,29 @@
  <div id = 'timer'></div>
  </body>
   <script type="text/javascript">
+   // window.onload = function() {
+   //   var init = 5;
+   //   var set = setInterval(function() {
+   //     if (init === 0) {
+   //      document.querySelector('#timer').innerHTML = 0;
+   //      clearInterval(set);
+   //     }else{
+   //      document.querySelector('#timer').innerHTML = init;
+   //      init--;
+   //     }
+   //   },1000);
+   // }
    window.onload = function() {
-     var init = 5;
-     var set = setInterval(function() {
-       if (init === 0) {
-        document.querySelector('#timer').innerHTML = 0;
-        clearInterval(set);
-       }else{
-        document.querySelector('#timer').innerHTML = init;
-        init--;
-       }
-     },1000);
+     document.querySelector('#s1').addEventListener('change',function(argument) {
+       console.log(this.value);
+     })
    }
  </script>
+ <select id="s1" style="width: 100px">
+ <span style="border: 1px;width: 30%">a</span>
+   <option>a</option>
+   <option>b</option>
+   <option>c</option>
+   <option>d</option>
+ </select>
 </html>

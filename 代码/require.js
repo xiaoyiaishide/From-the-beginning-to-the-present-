@@ -7,7 +7,7 @@ define(["juery"],function($){
 			url:...,
 			queryParams:{xxx:xxx},
 			toolbar:[
-			{text:µ¼³ö£¬handler:handleExport},
+			{text:ÂµÂ¼Â³Ã¶Â£Â¬handler:handleExport},
 			{},
 			]
 		});
@@ -19,3 +19,17 @@ define(["juery"],function($){
 		}
 	};
 });
+
+class Person{
+	name: string;
+	age: number;
+	sex: boolean;
+	greeting(){
+		console.log();
+	}
+	contructor(){
+
+	}
+}
+
+let ly = new Person();

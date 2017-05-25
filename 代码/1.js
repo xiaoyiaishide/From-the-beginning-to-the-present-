@@ -13,3 +13,11 @@ function box() {
     }
   }
 }
+var Animal = fuunction(){};
+Animal.prototype.breath = function() {
+
+}
+@Component({
+  template:'',
+  
+})
