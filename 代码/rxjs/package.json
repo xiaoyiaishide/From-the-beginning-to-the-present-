@@ -1,0 +1,12 @@
+{
+	"name": "app",
+	"version": "0.0.0",
+	"author": "ly",
+	"description": "rxjs学习",
+	"keyword": ["javascript", "rxjs"],
+	"script": "",
+	"dependencies": {
+		"rxjs": "^5.2.0"
+	},
+	"devDependencies": {}
+}
