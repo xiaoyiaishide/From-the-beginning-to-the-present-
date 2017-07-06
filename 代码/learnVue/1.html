@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://unpkg.com/vue"></script>
+	<script type="text/javascript">
+	window.onload = function(argument) {
+
+		var app = new Vue({
+			el: '#app',
+			data: {
+				message:'hello world'	
+			}
+		});
+
+		var app1 = new Vue({
+			el: 'span',
+			data: {
+				message: '111',
+				seeIt: false	
+			}
+		});		
+
+		var app2 = new Vue({
+			el: 'ul',
+			data: {
+				// todos: [{value: 1},{value: 2},{value: 3},{value: 4}],
+				todos: [1, 2, 3, 4, 5],
+				seeIt: false	
+			}
+		});
+
+		var app3 = new Vue({
+			el: '#btn1',
+			data: {
+				message:'逆转消息',
+				clickTest:function() {
+					this.message = this.message.split('').reverse().join('');
+				}
+			}
+		});
+
+Vue.component('todo-item', {
+  // todo-item 组件现在接受一个
+  // "prop"，类似于一个自定义属性
+  // 这个属性名为 todo。
+  props: ['todo'],
+  template: '<li>{{ todo.text }}</li>'
+})
+	}
+	</script>
+</head>
+<body>
+	<div id='app'>
+		{{ message }}
+	</div>
+	<span v-bind:title="message" v-if="seeIt">
+		鼠标悬停几秒你将看到
+	</span>
+	<ul>
+		<!-- <li v-for='todo in todos'>{{todo.value}}</li> -->
+		<li v-for='todo in todos'>{{todo}}</li>
+	</ul>
+	<div id="btn1">
+		{{ message }}
+		<input type="button"value="点我" v-on:click="clickTest()">
+		<input type="text" v-model="message">
+	</div>
+	<ol>
+  <!-- 创建一个 todo-item 组件的实例 -->
+  <todo-item></todo-item>
+</ol>
+</body>
+</html>
